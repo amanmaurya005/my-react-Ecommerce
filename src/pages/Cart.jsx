@@ -37,9 +37,9 @@ function Cart() {
           return (
             <div
               key={data.id}
-              className="w-[20%] min-w-[250px]  h-80 rounded-2xl shadow-md bg-white hover:shadow-lg transition-all duration-300"
+              className="w-full  rounded-2xl shadow-md bg-white hover:shadow-lg transition-all duration-300"
             >
-              <div className="w-48 h-52 p-6 object-cover m-auto">
+              <div className="w-20 h-20 p-2 pl-4">
                 <img src={data.image} alt={data.title} className="w-full h-full" />
               </div>
               <p className="h-6  pl-4 text-start font-semibold ">
@@ -49,6 +49,7 @@ function Cart() {
                 ${data.price}
               </p>
               <p className='pl-4 text-start font-semibold'>{description}</p>
+              <button className='bg-emerald-500 hover:bg-emerald-600 px-6 py-3 rounded-2xl hover:text-white'>Remove</button>
             </div>
           );
         })
